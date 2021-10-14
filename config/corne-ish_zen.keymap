@@ -23,50 +23,9 @@
                         label = "COLEMAK";
                         bindings = <
    &kp TAB       &kp Q &kp W &kp F &kp P      &kp B        &kp J &kp L &kp U    &kp Y   &kp SEMI &kp BKSP
-   &mt LCTL ESC  &kp A &kp R &kp S &lt MOVE T &kp G        &kp M &kp N &kp E    &kp I   &kp O    &kp DEL
+   &kp ESC       &kp A &kp R &kp S &kp T      &kp G        &kp M &kp N &kp E    &kp I   &kp O    &kp DEL
    &kp LSHFT     &kp Z &kp X &kp C &kp D      &kp V        &kp K &kp H &kp CMMA &kp DOT &kp FSLH &kp ENTER
-                   &kp LGUI &kp LALT &lt NUMPAD SPC        &kp ENTER &kp F13 &mo FUNC 
-                        >;
-                };
-
-
-                numpad_layer {
-                        label = "NUMPAD";
-                        bindings = < 
-   &kp TAB     &kp QMARK &kp AT   &kp HASH &kp DLLR &kp PRCNT       &kp KP_SLASH    &kp N7 &kp N8 &kp N9 &kp KP_MINUS &kp BSPC
-   &kp GRAVE   &kp EXCL  &kp AMPS &kp LPAR &kp RPAR &kp SQT         &kp KP_ASTERISK &kp N4 &kp N5 &kp N6 &kp KP_PLUS  &kp DEL
-   &kp LSHFT   &kp BSLH  &kp TLDE &kp LBKT &kp RBKT &kp DQT         &kp CARET       &kp N1 &kp N2 &kp N3 &kp KP_EQUAL &kp ENTER
-                              &mo CONFIG &kp LCTL &mo NUMPAD        &kp N0 &kp KP_DOT &kp CMMA
-                        >;
-                };
-
-                move_layer {
-                        label = "MOVE";
-                        bindings = <
-   &kp CAPS    &none  &none  &none     &none     &none        &kp LC(LEFT)   &kp LC(DOWN)   &kp LC(UP) &kp LC(RIGHT) &none  &none
-   &kp INS     &none  &none  &kp LSHFT &mo MOVE  &none        &kp LEFT       &kp DOWN       &kp UP     &kp RIGHT     &none  &none
-   &kp KP_NLCK &none  &none  &none     &none     &none        &kp HOME       &kp PG_DN      &kp PG_UP  &kp END       &none  &none 
-                                    &none &none &none        &none &none &none
-                        >;
-                };
-
-                func_layer {
-                        label = "FUNC";
-                        bindings = <
-   &none   &kp F9  &kp F10  &kp F11   &kp F12 &none       &none    &none    &none     &none     &none    &none 
-   &none   &kp F5  &kp F6   &kp F7    &kp F8  &none       &kp LGUI &kp LCTL &kp LALT  &kp LSHFT &kp RALT &none   
-   &none   &kp F1  &kp F2   &kp F3    &kp F4  &none       &none    &none    &none     &none     &none    &none
-                                &none  &none  &none       &none    &none    &mo FUNC
-                        >;
-                };
-
-                config_layer {
-                        label = "CONFIG";
-                        bindings = <
-   &reset     &none        &none        &none        &none        &none           &none &none   &none &none &none &none 
-   &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4    &none &none   &none &none &none &none
-   &none      &none        &none        &none        &none        &none           &none &none   &none &none &none &none
-                                                &mo CONFIG &none  &mo NUMPAD      &none  &none  &none 
+                   &kp LGUI &kp LALT &mo NUMPAD            &kp SPC &kp F13 &mo FUNC 
                         >;
                 };
         };

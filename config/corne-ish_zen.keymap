@@ -63,9 +63,9 @@
                 move_layer {
                         label = "MOVE";
                         bindings = <
-   &kp CAPS   &none  &none  &none     &none     &none        &kp LC(LEFT)   &kp LC(DOWN)   &kp LC(UP) &kp LC(RIGHT) &none  &none
-   &kp INS    &none  &none  &kp LSHFT &mo MOVE  &none        &kp LEFT       &kp DOWN       &kp UP     &kp RIGHT     &none  &none
-   &KP_NLCK   &none  &none  &none     &none     &none        &kp HOME       &kp PG_DN      &kp PG_UP  &kp END       &none  &none 
+   &kp CAPS    &none  &none  &none     &none     &none        &kp LC(LEFT)   &kp LC(DOWN)   &kp LC(UP) &kp LC(RIGHT) &none  &none
+   &kp INS     &none  &none  &kp LSHFT &mo MOVE  &none        &kp LEFT       &kp DOWN       &kp UP     &kp RIGHT     &none  &none
+   &kp KP_NLCK &none  &none  &none     &none     &none        &kp HOME       &kp PG_DN      &kp PG_UP  &kp END       &none  &none 
                                     &none &none &none        &none &none &none
                         >;
                 };

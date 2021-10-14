@@ -29,13 +29,13 @@
                         >;
                 };
 
-                
+
                    numpad_layer {
                         label = "NUMPAD";
                         bindings = < 
-   &kp TAB     &kp QMARK &kp AT   &kp HASH &kp DLLR &kp PRCNT       &kp KP_SLASH    &kp N7 &kp N8 &kp N9 &kp KP_MINUS &kp BSPC
-   &kp GRAVE   &kp EXCL  &kp AMPS &kp LPAR &kp RPAR &kp SQT         &kp KP_ASTERISK &kp N4 &kp N5 &kp N6 &kp KP_PLUS  &kp DEL
-   &kp LSHFT   &kp BSLH  &kp TLDE &kp LBKT &kp RBKT &kp DQT         &kp CARET       &kp N1 &kp N2 &kp N3 &kp KP_EQUAL &kp ENTER
+   &kp TAB     &kp QMARK &kp AT    &kp HASH &kp DLLR &kp PRCNT       &kp SLASH   &kp N7 &kp N8 &kp N9 &kp MINUS &kp BSPC
+   &kp GRAVE   &kp EXCL  &kp AMPS  &kp LPAR &kp RPAR &kp SQT         &kp STAR    &kp N4 &kp N5 &kp N6 &kp PLUS  &kp DEL
+   &kp LSHFT   &kp BSLH  &kp TILDE &kp LBKT &kp RBKT &kp DQT         &kp CARET   &kp N1 &kp N2 &kp N3 &kp EQUAL &kp ENTER
                               &mo CONFIG &kp LCTL &mo NUMPAD        &kp N0 &kp KP_DOT &kp CMMA
                         >;
                 };

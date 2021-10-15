@@ -19,19 +19,19 @@
     combos {
         compatible = "zmk,combos";
         combo_eau {
-            timeout-ms = <50>;
+            timeout-ms = <35>;
             key-positions = <8 9>;
             bindings = <&kp RA(W)>;
         };
 
         combo_ae {
-            timeout-ms = <50>;
+            timeout-ms = <35>;
             key-positions = <20 21>;
             bindings = <&kp RA(Q)>;
         };
 
         combo_oe {
-            timeout-ms = <50>;
+            timeout-ms = <35>;
             key-positions = <32 33>;
             bindings = <&kp RA(P)>;
         };

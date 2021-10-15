@@ -16,6 +16,29 @@
 #define CONFIG  4
 
 / {
+    combos {
+        compatible = "zmk,combos";
+        combo_eau {
+            timeout-ms = <50>;
+            key-positions = <9 10>;
+            bindings = <&kp RA(W)>;
+        };
+
+        combo_ae {
+            timeout-ms = <50>;
+            key-positions = <21 22>;
+            bindings = <&kp RA(Q)>;
+        };
+
+        combo_oe {
+            timeout-ms = <50>;
+            key-positions = <33 34>;
+            bindings = <&kp RA(P)>;
+        };
+    };
+};
+
+/ {
         keymap {
                 compatible = "zmk,keymap";
 

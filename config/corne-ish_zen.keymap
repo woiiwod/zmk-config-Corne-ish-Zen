@@ -67,7 +67,7 @@
         combo_degrees {
             timeout-ms = <35>;
             key-positions = <18 30>;
-            bindings = <&kp degrees>;
+            bindings = <&degrees>;
 
         };
     };

@@ -50,6 +50,24 @@
             key-positions = <6 18>;
             bindings = <&kp PIPE>;
         };
+        combo_degrees {
+            timeout-ms = <35>;
+            key-positions = <18 30>;
+            bindings = <degrees>
+
+        };
+    };
+    macros {
+        degrees: degrees {
+            label = "degrees";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LALT>
+                , <&macro_tap &kp KP_N0 &kp KP_N1 &kp KP_N7 &kp KP_N6>
+                , <&macro_release &kp LALT>
+                ;
+        };
     };
 };
 

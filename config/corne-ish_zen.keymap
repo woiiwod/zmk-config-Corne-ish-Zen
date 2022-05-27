@@ -50,12 +50,7 @@
             key-positions = <6 18>;
             bindings = <&kp PIPE>;
         };
-        combo_degrees {
-            timeout-ms = <35>;
-            key-positions = <18 30>;
-            bindings = <&kp degrees>
 
-        };
     };
     macros {
         degrees: degrees {

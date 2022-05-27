@@ -35,6 +35,21 @@
             key-positions = <32 33>;
             bindings = <&kp RA(P)>;
         };
+        combo_equ {
+            timeout-ms = <35>;
+            key-positions = <6 18>;
+            bindings = <&kp EQUAL>;
+        };
+        combo_underline {
+            timeout-ms = <35>;
+            key-positions = <18 30>;
+            bindings = <&kp UNDER>;
+        };
+        combo_pipe {
+            timeout-ms = <35>;
+            key-positions = <7 19t>;
+            bindings = <&kp PIPE>;
+        };
     };
 };
 

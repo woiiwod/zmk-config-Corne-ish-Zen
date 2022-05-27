@@ -47,7 +47,7 @@
         };
         combo_pipe {
             timeout-ms = <35>;
-            key-positions = <7 19t>;
+            key-positions = <7 19>;
             bindings = <&kp PIPE>;
         };
     };

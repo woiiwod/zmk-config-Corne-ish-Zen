@@ -31,6 +31,11 @@
 };
 / {
     combos {
+// -----------------------------------------------------------------------------------------
+// |  TAB0|  Q1 |  W2 |  F3 |  P4 |  B5 |   |  J6 |  L7  |  U8 |  Y9 |  ;10| BKSP11|
+// |CTRL12|  A13|  R14|  S15|  T16|  G17|   |  M18|  N19 |  E20|  I21|  O22| DEL23 |
+// |SHFT24|  Z25|  X26|  C27|  D28|  V29|   |  K30|  H31 |  ,32|  .33|  /34| ENT35 |
+//                    |GUI36|ALT37|SPC38|   |ENT39|F13 40|FUNC41|
         compatible = "zmk,combos";
         combo_eau {
             timeout-ms = <35>;
@@ -49,26 +54,50 @@
             key-positions = <32 33>;
             bindings = <&kp RA(P)>;
         };
-        combo_equ {
+        combo_dquote {
             timeout-ms = <35>;
-            key-positions = <7 19>;
-            bindings = <&kp EQUAL>;
+            key-positions = <7 8>;
+            bindings = <&kp DQT>;
         };
-        combo_underline {
+        combo_quote {
             timeout-ms = <35>;
-            key-positions = <19 31>;
-            bindings = <&kp UNDER>;
+            key-positions = <19 20>;
+            bindings = <&kp SQT>;
         };
-        combo_pipe {
+        combo_tick {
             timeout-ms = <35>;
-            key-positions = <6 18>;
-            bindings = <&kp PIPE>;
+            key-positions = <31 32>;
+            bindings = <&kp GRAVE>;
         };
         combo_degrees {
             timeout-ms = <35>;
-            key-positions = <18 30>;
+            key-positions = <18 21>;
             bindings = <&degrees>;
-
+        };
+        combo_ass {
+            timeout-ms = <35>;
+            key-positions = <14 15>;
+            bindings = <&kp LA(MINUS)>;
+        };
+        combo_pipe {
+            timeout-ms = <35>;
+            key-positions = <26 27>;
+            bindings = <&kp LC(LS(M))>;
+        };
+        combo_comment {
+            timeout-ms = <35>;
+            key-positions = <2 3>;
+            bindings = <&kp LC(LS(C))>;
+        };
+        combo_et {
+            timeout-ms = <35>;
+            key-positions = <9 20>;
+            bindings = <&kp RA(E)>;
+        };
+        combo_et {
+            timeout-ms = <35>;
+            key-positions = <9 18>;
+            bindings = <&kp RA(E)>;
         };
     };
 };
@@ -79,9 +108,14 @@
 
                 default_layer {
                         label = "COLEMAK";
+// -----------------------------------------------------------------------------------------
+// |  TAB |  Q  |  W  |  F  |  P  |  B  |   |  J  |  L   |  U  |  Y  |  ;  | BKSP |
+// | CTRL |  A  |  R  |  S  |  T  |  G  |   |  M  |  N   |  E  |  I  |  O  | DEL  |
+// | SHFT |  Z  |  X  |  C  |  D  |  V  |   |  K  |  H   |  ,  |  .  |  /  | ENT  |
+//                    | GUI |LALT | SPC |   | ENT | F13  | FUNC|
                         bindings = <
-   &kp TAB        &kp Q &kp W &kp F &kp P       &kp B        &kp J &kp L &kp U    &kp Y   &kp SEMI &kp BSPC
-   &mt LCTRL ESC  &kp A &kp R &kp S &lt MOVE T  &kp G        &kp M &kp N &kp E    &kp I   &kp O    &kp DEL
+   &kp TAB        &kp Q &kp W &kp F &kp P       &kp B        &kp J &kp L &kp U     &kp Y   &kp SEMI &kp BSPC
+   &mt LCTRL ESC  &kp A &kp R &kp S &lt MOVE T  &kp G        &kp M &kp N &kp E     &kp I   &kp O    &kp DEL
    &kp LSHFT      &kp Z &kp X &kp C &kp D       &kp V        &kp K &kp H &kp COMMA &kp DOT &kp FSLH &kp ENTER
                    &kp LGUI &kp LALT &lt NUMPAD SPACE        &kp ENTER &kp F13 &mo FUNC 
                         >;
@@ -90,16 +124,26 @@
 
                 numpad_layer {
                         label = "NUMPAD";
+// -----------------------------------------------------------------------------------------
+// |  TAB |  ?  |  @  |  #  |  $  |  %  |   |  /  |  7   |  8  |  9  |  -  | BKSP |
+// |  `   |  !  |  &  |  (  |  )  |  _  |   |  *  |  4   |  5  |  6  |  +  | DEL  |
+// | SHFT |  \  |  ~  |  [  |  ]  |  |  |   |  ^  |  1   |  2  |  3  |  =  | ENT  |
+//                    |CONF | LWR | SPC |   | ENT | RSE  | ALT |
                         bindings = < 
    &kp TAB     &kp QMARK &kp AT    &kp HASH &kp DLLR &kp PRCNT       &kp KP_SLASH    &kp N7 &kp N8 &kp N9 &kp KP_MINUS &kp BSPC
-   &kp GRAVE   &kp EXCL  &kp AMPS  &kp LPAR &kp RPAR &kp SQT         &kp KP_ASTERISK &kp N4 &kp N5 &kp N6 &kp KP_PLUS  &kp DEL
-   &kp LSHFT   &kp BSLH  &kp TILDE &kp LBKT &kp RBKT &kp DQT         &kp CARET       &kp N1 &kp N2 &kp N3 &kp KP_EQUAL &kp ENTER
-                              &mo CONFIG &kp LCTRL &mo NUMPAD        &kp N0 &kp KP_DOT &kp COMMA
+   &kp GRAVE   &kp EXCL  &kp AMPS  &kp LPAR &kp RPAR &kp UNDER       &kp KP_ASTERISK &kp N4 &kp N5 &kp N6 &kp KP_PLUS  &kp DEL
+   &kp LSHFT   &kp BSLH  &kp TILDE &kp LBKT &kp RBKT &kp PIPE        &kp CARET       &kp N1 &kp N2 &kp N3 &kp KP_EQUAL &kp ENTER
+                              &mo CONFIG &kp LALT &mo NUMPAD         &kp N0 &kp KP_DOT &kp COMMA
                         >;
                 };
 
                 move_layer {
                         label = "MOVE";
+// -----------------------------------------------------------------------------------------
+// | CAPS | NEXT| Vol+|     |     |     |   |CLEFT|CDOWN | CUP  |CRIGHT|     |      |
+// | INS  | PLAY| Vol-|Shift| MOVE|     |   | LEFT| DOWN |  UP  | RIGHT|     |      |
+// | NLCK |     |     |     |     |     |   | HOME| PGDN | PGUP | END  |     |      |
+//                    |     |     |     |   |     |      |      |
                         bindings = <
    &kp CAPS    &kp C_NEXT &kp C_VOL_UP  &none     &none     &none        &kp LC(LEFT)   &kp LC(DOWN)   &kp LC(UP) &kp LC(RIGHT) &none  &none
    &kp INS     &kp C_PP   &kp C_VOL_DN  &kp LSHFT &mo MOVE  &none        &kp LEFT       &kp DOWN       &kp UP     &kp RIGHT     &none  &none
@@ -110,6 +154,11 @@
 
                 func_layer {
                         label = "FUNC";
+// -----------------------------------------------------------------------------------------
+// |      | F9  | F10 | F11 | F12 |     |   |     |      |      |      |     |      |
+// |      | F5  | F7  | F8  | F9  |     |   | LGUI|LCTRL | LALT |LSHIFT|RALT |      |
+// |      | F1  | F2  | F2  | F3  |     |   |     |      |      |      |     |      |
+//                    |     |     |     |   |     |      |      |
                         bindings = <
    &none   &kp F9  &kp F10  &kp F11   &kp F12 &none       &none    &none    &none     &none     &none    &none 
    &none   &kp F5  &kp F6   &kp F7    &kp F8  &none       &kp LGUI &kp LCTRL &kp LALT  &kp LSHFT &kp RALT &none   
@@ -120,6 +169,11 @@
 
                 config_layer {
                         label = "CONFIG";
+// -----------------------------------------------------------------------------------------
+// |      |     |     |     |     |     |   |     |      |      |      |     |      |
+// |BT CLR| BT0 | BT1 | BT2 | BT3 | BT4 |   |     |      |      |      |     |      |
+// |      |     |     |     |     |     |   |     |      |      |      |     |      |
+//                    |     |     |     |   |     |      |      |
                         bindings = <
    &reset     &none        &none        &none        &none        &none           &none &none   &none &none &none &none 
    &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4    &none &none   &none &none &none &none
